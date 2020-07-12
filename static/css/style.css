@@ -1,0 +1,38 @@
+#page_title {
+  text-align: center;
+}
+
+#form_container {
+  margin-top: 125px;;
+}
+
+#image_container {
+  display: inline-block;
+}
+
+.card > img {
+  cursor: pointer;
+}
+
+[id='toggle-heart'] {
+  position: absolute;
+  left: -100vw;
+}
+
+[for='toggle-heart'] {
+  color: #aab8c2;
+}
+
+[id='toggle-heart']:checked + label {
+  color: #e2264d;
+}
+
+[for='toggle-heart'] {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#no_result {
+  text-align: center;
+}
+

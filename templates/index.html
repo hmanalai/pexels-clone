@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{{super()}}
+  <script type="text/javascript" src="{{ url_for('static', filename= 'js/script.js') }}"></script>
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+{% endblock %}
+
+
+{% block app_content %}
+  <div class="container" style="text-align: center;">
+    <div id="form_container">
+      <form method="POST" action="{{ url_for('home') }}" class="form d-flex justify-content-center md-form form-sm active-purple-2 mt-2" id="form">
+        <input class="form-control form-control-sm mr-3 w-75" name="search_bar" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn purple-gradient btn-md" type="submit" id="search_button">
+          <i class="fas fa-search" aria-hidden="true"></i> Search
+        </button>
+      </form>
+    </div>
+
+    <div class="card-columns" id="image_container">
+      {% if photos %}
+        {% for photo in photos %}
+        <div class="card">
+          <img data-toggle="modal" data-target="#zoom_image" class="card-img-top" src="{{photo.src.medium}}" data-src="{{photo.src.original}}">
+          <div class="card-body">
+              <a target="_blank" rel="noopener noreferrer" href="{{photo.photographer_url}}"><small>Photographer: {{photo.photographer}}</small></a>
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div id="no_result">No Results</div>
+      {% endif %}
+    </div>
+  </div>
+
+{% include "snips/modals.html" %}
+
+{% endblock %}

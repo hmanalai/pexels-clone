@@ -1,0 +1,59 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+    <!-- MDN Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{%endblock%}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- MDN Bootstrap Javascript -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+{%endblock%}
+
+{% block title %}
+    {% if title %}{{ title }} - Pexels Clone {% else %}Welcome to Pexels Clone {% endif %}
+{% endblock %}
+
+{% block content %}
+
+{% block navbar %}
+<nav class="navbar navbar-light fixed-top" style="background-color:#d1aaff">
+    <a>
+      <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+      Pexels Clone
+    </a>
+    <a>
+      <span>❤</span>
+      Favorite Photos 
+    </a>
+  </nav>
+{%endblock%}
+
+{% block app_content %}
+    {# application content needs to be provided in the app_content block #}
+{% endblock %}
+
+{% block footer %}
+    <footer class="page-footer font-small blue-grey lighten-5">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: Hila Manalai </div>   
+  </footer>
+{% endblock %}
+
+{% endblock %}

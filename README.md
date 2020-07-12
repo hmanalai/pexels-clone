@@ -1,3 +1,0 @@
-# pexels-clone
-
-*In Progress*
