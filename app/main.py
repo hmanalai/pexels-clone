@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 Bootstrap(app)
 
-@app.route("/home",  methods=["POST", "GET"])
+@app.route("/",  methods=["POST", "GET"])
 def home():
     photos = None 
     result = None
