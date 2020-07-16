@@ -12,6 +12,8 @@
 
 
 {% block app_content %}
+
+{% include "welcome_page.html" %}
   <div class="container" style="text-align: center;">
     <div id="form_container">
       <form method="POST" action="{{ url_for('home') }}" class="form d-flex justify-content-center md-form form-sm active-purple-2 mt-2" id="form">
@@ -33,7 +35,7 @@
         </div>
         {% endfor %}
       {% else %}
-        <div id="no_result">No Results</div>
+        <div id="no_result"></div>
       {% endif %}
     </div>
   </div>

@@ -1,0 +1,49 @@
+#home {
+  background-image: url('cover_image.png');
+  background-size: cover;
+  justify-content: center;
+}
+
+.typewriter h1 {
+  white-space: nowrap;
+  overflow: hidden;     
+  font-size: 50px;
+  color: rgba(255,255,255,.70);
+  margin: 0 auto;
+}
+
+.typewriter h1 {
+  animation: animated-text 4s steps(20,end) 1s 1 normal both
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+.scroll .hero {
+  transform: scale(0.98);
+}
+ 
+.hero {
+  background-attachment: fixed;
+  transition: transform 0.5s ease-in-out;
+}
+ 
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+ 
+.hero .container-fluid {
+  z-index: 10;
+}

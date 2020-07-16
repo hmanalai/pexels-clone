@@ -10,7 +10,7 @@ Bootstrap(app)
 @app.route("/",  methods=["POST", "GET"])
 def home():
     photos = None 
-    result = None
+    search_keyword = 'Welcome'
 
     if request.method == "POST":
         search_keyword = request.form.get('search_bar')
